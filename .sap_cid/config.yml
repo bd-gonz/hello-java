@@ -1,5 +1,7 @@
+general:
+  buildTool: maven
+
 stages:
-  Build:
+  build:
     additionalCommands:
       - mvn clean compile
-      

@@ -17,9 +17,5 @@ stages:
         - name: BRIDGE_POLARIS_BRANCH_NAME
           value: "main"
 
-      credentialVariables:
-        - name: BRIDGE_POLARIS_ACCESSTOKEN
-          credentialId: "polaris_token"
-
       runLast:
         command: "bash scripts/polaris-scan.sh"

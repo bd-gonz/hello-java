@@ -5,21 +5,8 @@ stages:
 
     _additional:
       stringVariables:
-        - name: BRIDGE_POLARIS_SERVERURL
+        - name: bridge_polaris_serverurl
           value: "https://poc.polaris.blackduck.com"
-
-        - name: BRIDGE_POLARIS_APPLICATION_NAME
-          value: "EGC-SAP-CICD-Demo"
-
-        - name: BRIDGE_POLARIS_PROJECT_NAME
-          value: "hello-java"
-
-        - name: BRIDGE_POLARIS_BRANCH_NAME
-          value: "main"
-
-      credentialVariables:
-        - name: BRIDGE_POLARIS_ACCESSTOKEN
-          credentialName: "polaris-token"
 
       runLast:
         command: "bash scripts/polaris-scan.sh"

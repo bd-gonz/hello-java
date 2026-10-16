@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+env | sort
 
 BRIDGE_URL="https://repo.blackduck.com/artifactory/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/latest/bridge-cli-bundle-linux64.zip"
 BRIDGE_DIR="${PWD}/.bridge-cli"

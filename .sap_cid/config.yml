@@ -7,6 +7,4 @@ stages:
       stringVariables:
         - name: bridge_polaris_serverurl
           value: "https://poc.polaris.blackduck.com"
-
-      runLast:
-        command: "bash scripts/polaris-scan.sh"
+``

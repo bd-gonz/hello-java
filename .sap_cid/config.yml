@@ -1,7 +1,4 @@
-general:
-  buildTool: maven
-
 stages:
   build:
-    additionalCommands:
-      - mvn clean compile
+    buildTool: maven
+    buildToolVersion: "3"

@@ -62,6 +62,4 @@ echo "Starting Polaris SAST and SCA assessment..."
   "polaris.application.name=${BRIDGE_POLARIS_APPLICATION_NAME}" \
   "polaris.project.name=${BRIDGE_POLARIS_PROJECT_NAME}" \
   "polaris.branch.name=${BRIDGE_POLARIS_BRANCH_NAME}" \
-  "polaris.assessment.types=SAST,SCA" \
-  "coverity.cleanCommand=mvn -B clean" \
-  "coverity.buildCommand=mvn -B -DskipTests package"
+  "polaris.assessment.types=SAST,SCA"

@@ -35,7 +35,7 @@ chmod +x "${BRIDGE_BIN}"
 echo "Downloading Java 21"
 
 curl -L -o temurin21.tar.gz \
-https://github.com/adoptium/temurin21-binaries/releases/latest/download/OpenJDK21U-jdk_x64_linux_hotspot.tar.gz
+https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz
 
 mkdir -p .jdk
 tar -xzf temurin21.tar.gz -C .jdk --strip-components=1

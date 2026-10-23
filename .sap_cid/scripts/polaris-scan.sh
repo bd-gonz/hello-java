@@ -32,6 +32,26 @@ fi
 
 chmod +x "${BRIDGE_BIN}"
 
+echo "Downloading Java 21 and Maven 3.9.11..."
+
+curl -L -o temurin21.tar.gz \
+https://github.com/adoptium/temurin21-binaries/releases/latest/download/OpenJDK21U-jdk_x64_linux_hotspot.tar.gz
+
+mkdir -p .jdk
+tar -xzf temurin21.tar.gz -C .jdk --strip-components=1
+
+export JAVA_HOME="${PWD}/.jdk"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+curl -L -o maven.tar.gz \
+https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz
+
+mkdir -p .maven
+tar -xzf maven.tar.gz -C .maven --strip-components=1
+
+export MAVEN_HOME="${PWD}/.maven"
+export PATH="${MAVEN_HOME}/bin:${PATH}"
+
 echo "Starting Polaris SAST and SCA assessment..."
 
 "${BRIDGE_BIN}" \
